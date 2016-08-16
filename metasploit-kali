@@ -1,0 +1,12 @@
+#Docker file to build metasploit and forward it to physical interface
+#Based on Kali's docker image
+MAINTAINER Michael DeFrancesco <midefran@outlook.com>
+
+FROM kalilinux/kali-linux-docker
+
+RUN apt-get update
+RUN apt-get -y upgrade
+
+RUN apt-get -y install metasploit-framework
+
+CMD ["./msfconsole"]
