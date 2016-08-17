@@ -6,4 +6,4 @@ RUN apt-get -y upgrade
 
 RUN apt-get -y install metasploit-framework
 
-CMD ["./msfconsole"]
+CMD ["msfconsole"]
